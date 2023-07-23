@@ -5,4 +5,3 @@ class UserSchema(Schema):
     username = fields.Str()
     password = fields.Str()
     email = fields.Email()
-    created_at = fields.DateTime()

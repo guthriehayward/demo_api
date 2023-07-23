@@ -1,4 +1,6 @@
+from flask import request
 from flask_restful import Resource
+from app import db
 from models import User
 
 class UserResource(Resource):
@@ -18,6 +20,6 @@ class UserResource(Resource):
 class UserListResource(Resource):
 
     def get(self):
-        users = user.query.all()
+        users = User.query.all()
         return [user.serialize() for user in users]
     
